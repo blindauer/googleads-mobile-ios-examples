@@ -25,9 +25,24 @@ class ViewController: UIViewController, GADBannerViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     print("Google Mobile Ads SDK version: \(GADMobileAds.sharedInstance().sdkVersion)")
-    bannerView.adUnitID = "/6499/example/banner"
+
+    // Google test ad
+    // bannerView.adUnitID = "/6499/example/banner"
+
+    // TN POne rich media test ad
+    bannerView.adUnitID = "/2897118/test-mobile-in-app-mediation/test_tn_ios_p1smsrichmedia"
+
+    // TN banner test ad
+    // bannerView.adUnitID = "/2897118/test-mobile-in-app-mediation/test_tn_ios_banner"
+
     bannerView.rootViewController = self
-    bannerView.load(GAMRequest())
+    bannerView.delegate = self
+
+    let request = GAMRequest()
+    request.customTargeting = ["P1_ad_unit_id": "3231123789"]
+    bannerView.load(request)
+
+    print("banner ad view size: \(bannerView.frame.size.width) x \(bannerView.frame.size.height)")
   }
 
   func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {

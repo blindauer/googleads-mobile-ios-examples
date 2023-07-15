@@ -12,6 +12,7 @@
 		507818B4219653FF00E5A44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507818AD219653FF00E5A44A /* Main.storyboard */; };
 		507818B5219653FF00E5A44A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507818AF219653FF00E5A44A /* Images.xcassets */; };
 		507818B7219653FF00E5A44A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507818B1219653FF00E5A44A /* ViewController.swift */; };
+		845483485E5CBFBA895B25C5 /* Pods_AdManagerBannerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCD43CBE531DC77769CCE04 /* Pods_AdManagerBannerExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		507818B0219653FF00E5A44A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		507818B1219653FF00E5A44A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84FEE8DD1B0D4D47006C8148 /* AdManagerBannerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdManagerBannerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCD43CBE531DC77769CCE04 /* Pods_AdManagerBannerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdManagerBannerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93DED0688FFFA4C4BBC428A /* Pods-AdManagerBannerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdManagerBannerExample.release.xcconfig"; path = "Target Support Files/Pods-AdManagerBannerExample/Pods-AdManagerBannerExample.release.xcconfig"; sourceTree = "<group>"; };
+		F1C1D05D8FD73F90A5D882DB /* Pods-AdManagerBannerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdManagerBannerExample.debug.xcconfig"; path = "Target Support Files/Pods-AdManagerBannerExample/Pods-AdManagerBannerExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,12 +33,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845483485E5CBFBA895B25C5 /* Pods_AdManagerBannerExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FDA0AEEA36AF1FF0C1E9515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBCD43CBE531DC77769CCE04 /* Pods_AdManagerBannerExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		507818A9219653FF00E5A44A /* AdManagerBannerExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +64,8 @@
 		5BA690C20B8D85C05B68D9B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				F1C1D05D8FD73F90A5D882DB /* Pods-AdManagerBannerExample.debug.xcconfig */,
+				C93DED0688FFFA4C4BBC428A /* Pods-AdManagerBannerExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -61,6 +76,7 @@
 				507818A9219653FF00E5A44A /* AdManagerBannerExample */,
 				84FEE8DE1B0D4D47006C8148 /* Products */,
 				5BA690C20B8D85C05B68D9B0 /* Pods */,
+				0FDA0AEEA36AF1FF0C1E9515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84FEE8FC1B0D4D47006C8148 /* Build configuration list for PBXNativeTarget "AdManagerBannerExample" */;
 			buildPhases = (
+				0B9E5FD52372504409BD4E0A /* [CP] Check Pods Manifest.lock */,
 				84FEE8D91B0D4D47006C8148 /* Sources */,
 				84FEE8DA1B0D4D47006C8148 /* Frameworks */,
 				84FEE8DB1B0D4D47006C8148 /* Resources */,
+				8248E01F7881B2FF5BB1008E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -105,6 +123,7 @@
 				TargetAttributes = {
 					84FEE8DC1B0D4D47006C8148 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 46H57CBD4Q;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -140,6 +159,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B9E5FD52372504409BD4E0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdManagerBannerExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8248E01F7881B2FF5BB1008E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdManagerBannerExample/Pods-AdManagerBannerExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdManagerBannerExample/Pods-AdManagerBannerExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84FEE8D91B0D4D47006C8148 /* Sources */ = {
@@ -266,9 +332,11 @@
 		};
 		84FEE8FD1B0D4D47006C8148 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1C1D05D8FD73F90A5D882DB /* Pods-AdManagerBannerExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
+				DEVELOPMENT_TEAM = 46H57CBD4Q;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/AdManagerBannerExample/Info.plist";
@@ -287,9 +355,11 @@
 		};
 		84FEE8FE1B0D4D47006C8148 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C93DED0688FFFA4C4BBC428A /* Pods-AdManagerBannerExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
+				DEVELOPMENT_TEAM = 46H57CBD4Q;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/AdManagerBannerExample/Info.plist";

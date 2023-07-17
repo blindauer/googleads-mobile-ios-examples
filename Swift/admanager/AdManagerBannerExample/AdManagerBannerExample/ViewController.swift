@@ -22,35 +22,37 @@ class ViewController: UIViewController, GADBannerViewDelegate {
   /// The AdManager banner view.
   @IBOutlet weak var bannerView: GAMBannerView!
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    print("Google Mobile Ads SDK version: \(GADMobileAds.sharedInstance().sdkVersion)")
-    bannerView.adUnitID = "/6499/example/banner"
-    bannerView.rootViewController = self
-    bannerView.load(GAMRequest())
-  }
-
-  func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-    print("bannerViewDidReceiveAd")
-  }
-
-  func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-    print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-  }
-
-  func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
-    print("bannerViewDidRecordImpression")
-  }
-
-  func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
-    print("bannerViewWillPresentScreen")
-  }
-
-  func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
-    print("bannerViewWillDIsmissScreen")
-  }
-
-  func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
-    print("bannerViewDidDismissScreen")
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("Google Mobile Ads SDK version: \(GADMobileAds.sharedInstance().sdkVersion)")
+        bannerView.adUnitID = "/6499/example/banner"
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.load(GAMRequest())
+        print("Google Mobile Ads SDK version: \(GADMobileAds.sharedInstance().sdkVersion)")
+    }
+    
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("bannerViewDidReceiveAd")
+    }
+    
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
+        print("bannerViewDidRecordImpression")
+    }
+    
+    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("bannerViewWillPresentScreen")
+    }
+    
+    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("bannerViewWillDIsmissScreen")
+    }
+    
+    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print("bannerViewDidDismissScreen")
+    }
 }

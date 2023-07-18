@@ -26,7 +26,12 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         super.viewDidLoad()
         print("Google Mobile Ads SDK version: \(GADMobileAds.sharedInstance().sdkVersion)")
         bannerView.adUnitID = "/6499/example/banner"
+        
+        // TN banner test ad
+//        bannerView.adUnitID = "/2897118/test-mobile-in-app-mediation/test_tn_ios_banner"
+        
         bannerView.rootViewController = self
+        bannerView.isAutoloadEnabled = false
         bannerView.delegate = self
         bannerView.load(GAMRequest())
         print("Google Mobile Ads SDK version: \(GADMobileAds.sharedInstance().sdkVersion)")

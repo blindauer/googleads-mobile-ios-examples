@@ -22,19 +22,37 @@ class ViewController: UIViewController, GADBannerViewDelegate {
   /// The AdManager banner view.
   @IBOutlet weak var bannerView: GAMBannerView!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Google Mobile Ads SDK version: \(GADMobileAds.sharedInstance().sdkVersion)")
-        bannerView.adUnitID = "/6499/example/banner"
-        
+
+        // GAM test ad
+//        bannerView.adUnitID = "/6499/example/banner"
+
         // TN banner test ad
 //        bannerView.adUnitID = "/2897118/test-mobile-in-app-mediation/test_tn_ios_banner"
+        
+        // Evan's test ad
+        bannerView.adUnitID = "/2897118/test-mobile-in-app-mediation/test_tn_ios_keyboardmedrect"
         
         bannerView.rootViewController = self
         bannerView.isAutoloadEnabled = false
         bannerView.delegate = self
-        bannerView.load(GAMRequest())
-        print("Google Mobile Ads SDK version: \(GADMobileAds.sharedInstance().sdkVersion)")
+        
+        let request = GAMRequest()
+        bannerView.load(request)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Uncomment to see the ad inspector
+//        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
+//            GADMobileAds.sharedInstance().presentAdInspector(from: self) { error in
+//                print(error)
+//            }
+//        }
     }
     
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {

@@ -34,7 +34,8 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 //        bannerView.adUnitID = "/2897118/test-mobile-in-app-mediation/test_tn_ios_banner"
         
         // Evan's test ad
-        bannerView.adUnitID = "/2897118/test-mobile-in-app-mediation/test_tn_ios_keyboardmedrect"
+        bannerView.adUnitID = "/2897118/adopsplayground/testdevice-medrect"
+        //"/2897118/test-mobile-in-app-mediation/test_tn_ios_keyboardmedrect"
         
         bannerView.rootViewController = self
         bannerView.isAutoloadEnabled = false
@@ -48,11 +49,11 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         super.viewDidAppear(animated)
         
         // Uncomment to see the ad inspector
-//        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
-//            GADMobileAds.sharedInstance().presentAdInspector(from: self) { error in
-//                print(error)
-//            }
-//        }
+        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
+            GADMobileAds.sharedInstance().presentAdInspector(from: self) { error in
+                print(error)
+            }
+        }
     }
     
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
